@@ -13,7 +13,7 @@ spec:
         app: spring-boot-k8s
     spec:
       containers:
-        - name: spring-boot-k8s
+        - name: spring-boot-k8
           image: akshit2707/devops-automation
           # Image that will be used to containers in the cluster
           imagePullPolicy: IfNotPresent
