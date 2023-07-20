@@ -1,24 +1,28 @@
 apiVersion: apps/v1
 kind: Deployment # Kubernetes resource kind we are creating
 metadata:
-  name: spring-boot-kube
+  name: spring-boot-akshit
 spec:
   selector:
     matchLabels:
-      app: spring-boot-kube
-  replicas: 3 # Number of replicas that will be created for this deployment
+      app: spring-boot-akshit
+  replicas: 2 # Number of replicas that will be created for this deployment
   template:
     metadata:
       labels:
-        app: spring-boot-kube
+        app: spring-boot-akshit
     spec:
       containers:
-        - name: spring-boot-kube
+        - name: spring-boot-akshit
           image: akshit2707/devops-automation
           # Image that will be used to containers in the cluster
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 9090
+          environment:
+            - name: JAVA_VERSION
+              value: "19"
+
 # The port that the container is running on in the cluster
 
 
