@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: spring-boot-kube
-          image: akshit2707/devops-automation:java19
+          image: akshit2707/devops-automation
           # Image that will be used to containers in the cluster
           imagePullPolicy: IfNotPresent
           ports:
