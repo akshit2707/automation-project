@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment # Kubernetes resource kind we are creating
 metadata:
-  name: spring-boot-k8
+  name: spring-boot-kube
 spec:
   selector:
     matchLabels:
-      app: spring-boot-k8
+      app: spring-boot-kube
   replicas: 3 # Number of replicas that will be created for this deployment
   template:
     metadata:
       labels:
-        app: spring-boot-k8
+        app: spring-boot-kube
     spec:
       containers:
-        - name: spring-boot-k8
-          image: akshit2707/devops-automation
+        - name: spring-boot-kube
+          image: akshit2707/devops-automation:java19
           # Image that will be used to containers in the cluster
           imagePullPolicy: IfNotPresent
           ports:
